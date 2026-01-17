@@ -1,9 +1,3 @@
-Below is **ONE clean, fully edited, GitHub-ready README**.
-Everything is **proper Markdown**, **tables where needed**, **no ASCII clutter**, **copy-paste as a single cell**.
-
----
-
-````markdown
 # 🚗 H.264 Video Compression + Drowsiness Detection System
 
 An end-to-end **driver safety monitoring system** that integrates efficient video compression with real-time deep learning–based drowsiness detection.
@@ -228,7 +222,5 @@ that integrates **video compression, computer vision, and deep learning**.
 
 The system achieves **high accuracy, real-time performance, and efficient storage**, making it suitable for real-world deployment in driver monitoring and intelligent transportation systems.
 
-```
 
----
 
