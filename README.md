@@ -28,5 +28,24 @@ This project combines:
 ---
 
 ## 🎯 System Architecture
-
+┌──────────────────┐ ┌───────────────────┐ ┌────────────────────┐
+│ INPUT VIDEO │──▶│ VIDEO COMPRESS │──▶│ DROWSINESS │
+│ testing_video │ │ H.264 / AVC │ │ DETECTION │
+│ 39.34 MB │ │ CRF 23 │ │ (GPU Accelerated) │
+│ 469 frames │ │ ↓ 87.10% │ │ │
+│ 1920×1080@30fps│ │ 5.08 MB │ │ • MediaPipe │
+└──────────────────┘ └───────────────────┘ │ FaceMesh │
+│ • EyeCNN │
+│ • MouthCNN │
+│ • Head Pose │
+│ • Gaze Tracking │
+└────────────────────┘
+│
+┌───────────────┼──────────────┐
+│ │ │
+┌──────▼──────┐ ┌─────▼───────┐ ┌────▼────────┐
+│ CSV LOG │ │ ANNOTATED │ │ DOWNLOAD │
+│ 469 rows │ │ VIDEO MP4 │ │ & STATS │
+│ 10 columns │ │ + Alerts │ │ Summary │
+└─────────────┘ └─────────────┘ └─────────────┘
 
