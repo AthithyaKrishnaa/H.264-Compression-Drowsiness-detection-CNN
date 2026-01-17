@@ -1,4 +1,4 @@
-# H.264 Video Compression + Drowsiness Detection System
+# H.264 Video Compression + Drowsiness Detection Using CNN
 
 An end-to-end **driver safety monitoring system** that integrates efficient video compression with real-time deep learning–based drowsiness detection.
 
