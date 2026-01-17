@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Drowsiness Detection - Video Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 200px;
+            margin: 10px;
+        }
+        
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .video-section {
+            margin-bottom: 50px;
+        }
+        
+        .video-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .video-card h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .badge-red {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .badge-green {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .badge-blue {
+            background: #3498db;
+            color: white;
+        }
+        
+        .video-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .info-item strong {
+            color: #2c3e50;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .not-available {
+            background: #ecf0f1;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            color: #7f8c8d;
+        }
+        
+        .not-available svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+        
+        .github-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .github-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #24292e;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .github-link a:hover {
+            background: #3d444d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+            
+            .stat-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Driver Drowsiness Detection System</h1>
+        <p class="subtitle">Real-time drowsiness detection with H.264 video compression and deep learning</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>87.10%</h3>
+                <p>Video Compression</p>
+            </div>
+            <div class="stat-card">
+                <h3>46.2 FPS</h3>
+                <p>Processing Speed</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Face Detection</p>
+            </div>
+        </div>
+        
+        <!-- Original Video -->
+        <div class="video-section">
+            <div class="video-card">
+                <h2>
+                    📹 Original Video
+                    <span class="badge badge-red">Not Available</span>
+                </h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <strong>Size:</strong> 39.34 MB
+                    </div>
+                    <div class="info-item">
+                        <strong>Resolution:</strong> 1920×1080
+                    </div>
+                    <div class="info-item">
+                        <strong>Duration:</strong> 15.63 seconds
+                    </div>
+                    <div class="info-item">
+                        <strong>Frames:</strong> 469
+                    </div>
+                </div>
+                <div class="not-available">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <p><strong>Original video not included in repository</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Too large for GitHub (39 MB). Compressed version available below.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Compressed Video -->
+        <div class="video-section">
+            <div class="video-card">
+                <h2>
+                    🗜️ Compressed Video
+                    <span class="badge badge-green">Available</span>
+                </h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <strong>Size:</strong> 5.08 MB (87.10% reduction)
+                    </div>
+                    <div class="info-item">
+                        <strong>Codec:</strong> H.264/AVC
+                    </div>
+                    <div class="info-item">
+                        <strong>Quality:</strong> CRF 23 (High)
+                    </div>
+                </div>
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="compressed_testing_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Annotated Video -->
+        <div class="video-section">
+            <div class="video-card">
+                <h2>
+                    🎨 Annotated Video (Drowsiness Detection)
+                    <span class="badge badge-blue">Available</span>
+                </h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <strong>Features:</strong> Bounding boxes, alerts, drowsiness scores
+                    </div>
+                    <div class="info-item">
+                        <strong>Models:</strong> EyeCNN + MouthCNN + MediaPipe FaceMesh
+                    </div>
+                </div>
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="annotated_testing_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 5px;">
+                    <strong>🔎 Detection Features:</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>🟢 Green box: Face region</li>
+                        <li>🔵 Blue boxes: Eye tracking (left & right)</li>
+                        <li>🟡 Yellow box: Mouth/yawn detection</li>
+                        <li>🚨 Red banner: Drowsiness alert (when >50% or eye closure >2s)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="github-link">
+            <a href="https://github.com/AthithyaKrishnaa/H.264-Compression-Drowsiness-detection-CNN" target="_blank">
+                <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+    </div>
+</body>
+</html>
