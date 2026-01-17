@@ -181,22 +181,6 @@ Frame → FaceMesh → ROI Extraction → CNN Inference → Drowsiness Score →
 
 ---
 
-## 🧩 Hardware Requirements
-
-### Minimum
-
-* CPU: Quad-core processor
-* RAM: 8 GB
-* Camera: 720p webcam
-
-### Recommended
-
-* GPU: NVIDIA GPU (4 GB+ VRAM)
-* RAM: 16 GB
-* Camera: 1080p
-
----
-
 ## ✨ Key Achievements
 
 * **87% video size reduction** without accuracy loss
