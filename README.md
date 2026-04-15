@@ -1,4 +1,4 @@
-# H.264 Video Compression + Drowsiness Detection Using CNN
+# H.266 Video Compression + Drowsiness Detection Using CNN
 
 An end-to-end **driver safety monitoring system** that integrates efficient video compression with real-time deep learning–based drowsiness detection.
 
@@ -8,7 +8,7 @@ An end-to-end **driver safety monitoring system** that integrates efficient vide
 
 This project combines:
 
-- **H.264 / AVC video compression** (87.10% size reduction)
+- **H.266 / AVC video compression** (87.10% size reduction)
 - **Real-time facial landmark detection** using MediaPipe FaceMesh (468 landmarks)
 - **Deep learning classification** using PyTorch (EyeCNN + MouthCNN)
 - **Multi-modal drowsiness analysis**
@@ -32,7 +32,7 @@ This project combines:
 
 ```mermaid
 flowchart LR
-    A[Input Video<br/>1920×1080 @ 30 FPS] --> B[H.264 / AVC Compression<br/>CRF 23<br/>87.10% Reduction]
+    A[Input Video<br/>1920×1080 @ 30 FPS] --> B[H.266 / AVC Compression<br/>CRF 23<br/>87.10% Reduction]
     B --> C[Drowsiness Detection Pipeline]
 
     C --> D[MediaPipe FaceMesh<br/>468 Landmarks]
@@ -55,7 +55,7 @@ flowchart LR
 | Cell       | Description                                        |
 | ---------- | -------------------------------------------------- |
 | **Cell 1** | Environment setup, GPU check (Tesla T4, CUDA 12.6) |
-| **Cell 2** | Video compression pipeline (H.264, CRF 23)         |
+| **Cell 2** | Video compression pipeline (H.266, CRF 23)         |
 | **Cell 3** | Drowsiness detection + video annotation            |
 | **Cell 4** | Final report, metrics, and analysis                |
 
@@ -80,13 +80,13 @@ flowchart LR
 | ---------------- | -------------- |
 | Compressed Size  | 5.08 MB        |
 | Size Reduction   | **87.10%**     |
-| Codec            | H.264 / AVC    |
+| Codec            | H.266 / AVC    |
 | Quality Setting  | CRF 23         |
 | Compression Time | 55.52 seconds  |
 | Encoding Speed   | 8.45 FPS       |
 | Audio Codec      | AAC (128 kbps) |
 
-### Why H.264 / AVC?
+### Why H.266 / AVC?
 
 * Universal compatibility across devices and browsers
 * Efficient compression with low compute overhead
